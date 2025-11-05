@@ -3,10 +3,10 @@
 #include "hardware/gpio.h"
 #include "pico/time.h"
 
-static uint32_t data_pin = 999;      // GPIO pin connected to DHT11 data line
-static uint8_t data[5];         // Data buffer for DHT11 readings
-static int last_probe = -1;     // Timestamp of last successful data read in ms since boot
-static int data_valid = 0;      // Flag indicating if the last read data is valid
+static uint32_t data_pin = 999;     // GPIO pin connected to DHT11 data line
+static uint8_t data[5];             // Data buffer for DHT11 readings
+static int last_probe = -1;         // Timestamp of last successful data read in ms since boot
+static int data_valid = 0;          // Flag indicating if the last read data is valid
 
 // Sends the start signal to the DHT11 sensor
 static void dht11_start_signal(uint32_t pin){
